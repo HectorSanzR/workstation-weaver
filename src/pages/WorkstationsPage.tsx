@@ -306,7 +306,7 @@ export default function WorkstationsPage() {
                           onCheckedChange={() => toggleScreen(screen.id)}
                         />
                         <label htmlFor={screen.id} className="text-sm cursor-pointer">
-                          {screen.brand} {screen.model}
+                          {screen.brand} {screen.model} - <span className="font-mono text-muted-foreground">{screen.serialNumber}</span>
                         </label>
                       </div>
                     ))}
@@ -326,7 +326,7 @@ export default function WorkstationsPage() {
                         <SelectItem value="none">Sin mouse</SelectItem>
                         {availableMice.map(eq => (
                           <SelectItem key={eq.id} value={eq.id}>
-                            {eq.brand} {eq.model}
+                            {eq.brand} {eq.model} - {eq.serialNumber}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -345,7 +345,7 @@ export default function WorkstationsPage() {
                         <SelectItem value="none">Sin teclado</SelectItem>
                         {availableKeyboards.map(eq => (
                           <SelectItem key={eq.id} value={eq.id}>
-                            {eq.brand} {eq.model}
+                            {eq.brand} {eq.model} - {eq.serialNumber}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -365,7 +365,7 @@ export default function WorkstationsPage() {
                       <SelectItem value="none">Sin combo</SelectItem>
                       {availableCombos.map(eq => (
                         <SelectItem key={eq.id} value={eq.id}>
-                          {eq.brand} {eq.model}
+                          {eq.brand} {eq.model} - {eq.serialNumber}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -385,7 +385,7 @@ export default function WorkstationsPage() {
                         <SelectItem value="none">Sin impresora</SelectItem>
                         {availablePrinters.map(eq => (
                           <SelectItem key={eq.id} value={eq.id}>
-                            {eq.brand} {eq.model}
+                            {eq.brand} {eq.model} - {eq.serialNumber}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -404,7 +404,7 @@ export default function WorkstationsPage() {
                         <SelectItem value="none">Sin lector</SelectItem>
                         {availableScanners.map(eq => (
                           <SelectItem key={eq.id} value={eq.id}>
-                            {eq.brand} {eq.model}
+                            {eq.brand} {eq.model} - {eq.serialNumber}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -424,7 +424,7 @@ export default function WorkstationsPage() {
                       <SelectItem value="none">Sin PDA</SelectItem>
                       {availablePDAs.map(eq => (
                         <SelectItem key={eq.id} value={eq.id}>
-                          {eq.brand} {eq.model}
+                          {eq.brand} {eq.model} - {eq.serialNumber}
                         </SelectItem>
                       ))}
                     </SelectContent>
